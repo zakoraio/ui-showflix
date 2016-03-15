@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="showflix">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- endInject -->
+
+    <!-- Inject:css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- endInject -->
+
+</head>
+<body background="/img/curtains.jpg">
+<div class="container">
+    <div class="page-header ">
+        <div class="row">
+            <div class="col-sm-10">
+                <a class="showFlixHeader" href="#/catalog"><h1 class="headerFont">
+                    Showflix
+                </h1></a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#/logout" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        <section ng-view></section>
+    </div>
+</div>
+<div>
+    <div class=" row fontSmallWhite container">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4"> &copy;Saurabh Rai</div>
+
+    </div>
+</div>
+<!-- bower:js -->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/angular-messages/angular-messages.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endInject -->
+
+<!-- Inject:js -->
+<script src="/js/showFlixModule.js"></script>
+<script src="/js/userDetailsController.js"></script>
+<script src="/js/userController.js"></script>
+<script src="/js/showDetailsController.js"></script>
+<script src="/js/logoutController.js"></script>
+<script src="/js/loginController.js"></script>
+<script src="/js/dataService.js"></script>
+<script src="/js/customFilters.js"></script>
+<script src="/js/controller.js"></script>
+<script src="/js/constants.js"></script>
+<script src="/js/catalogController.js"></script>
+<script src="/js/addShowDetailsController.js"></script>
+<!-- endInject -->
+
+
+</body>
+</html>

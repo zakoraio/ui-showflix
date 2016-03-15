@@ -1,0 +1,153 @@
+/* Put your css in here */
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.error p {
+    color: red;
+    margin-bottom: 0px;
+}
+
+.popover-title{
+    background: #ffff99;
+    font-size:small;
+}
+
+.popover-content{
+    background: #ffe87c;
+    font-size: smaller;
+}
+.fontSmall {
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 200;
+    line-height: 15px;
+}
+
+.headerFont{
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    line-height: 50px;
+    color : gold;
+}
+
+.fontLarge {
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    line-height: 25px;
+}
+.fontSmallBold {
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    line-height: 15px;
+}
+.glyphicon-star, .glyphicon-star-empty {
+    color:lightgoldenrodyellow;
+}
+
+.img {
+    position: relative;
+    float: left;
+    width:  180px;
+    height: 250px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+.table {
+    border-bottom:0px !important;
+}
+ .table td {
+    border: 0px !important;
+}
+.fixed-table-container {
+    border:0px !important;
+}
+
+.table th{
+    text-align:center;
+    border: 0px !important;
+}
+
+.searchLabel{
+    padding: 3px 6px;
+    background-color:#337ab7;
+    border-radius : 4px;
+    color:#ffffff;
+}
+
+
+.commentContainer {
+    width: 500px;
+    max-height: 500px;
+    margin: 10px;
+    border: 1px solid #fff;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 7px #292929;
+    -moz-box-shadow: 0px 2px 7px #292929;
+    -webkit-box-shadow: 0px 2px 7px #292929;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.fontSmallWhite {
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 200;
+    line-height: 15px;
+    color:#ffffff;
+}
+
+
+.fontMediumWhite {
+    font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 20px;
+    color:#ffffff;
+}
+.addComment{
+    padding:10px 0px 0px 0px;
+}
+
+.loginPadding{
+    padding:10px 0px 0px 0px;
+}
+
+.imdbLinkPadding{
+    padding:10px 0px 0px 0px !important;
+}
+
+.showFlixHeader{
+    text-decoration: none !important;
+
+}

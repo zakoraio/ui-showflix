@@ -1,0 +1,67 @@
+<div class="row">
+
+    <div>
+        <uib-pagination ng-click=catalogVm.setCurrentPage(catalogVm.currentPage) total-items="catalogVm.items"
+                        max-size="5" boundary-links="true" items-per-page="4"
+                        ng-model="catalogVm.currentPage" rotate="false"></uib-pagination>
+    </div>
+
+    <div class="col-lg-3">
+        <table class="table ">
+
+
+            <tr ng-if="catalogVm.isLoginTypeAdmin()">
+                <td align="center">
+                    <button ng-click=catalogVm.addShowPage()
+                            class="btn btn-primary">Add new title
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="name" name="Search" required class="form-control" id="Search"
+                           placeholder="Search Title" ng-model="catalogVm.searchText">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button ng-click="catalogVm.saveSortCriteria('title')"
+                            class="btn btn-primary">By Title
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button ng-click="catalogVm.saveSortCriteria('year')" class="btn btn-primary">By Year
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button ng-click="catalogVm.saveSortCriteria('imdbRating')" class="btn btn-primary">By imdb Rating</button>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <button ng-click="catalogVm.saveSortCriteria('showFlixRating')" class="btn btn-primary">By Showflix Rating</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="col-lg-2" ng-repeat="item in catalogVm.catalogs |orderBy:[catalogVm.sortCriteria]:catalogVm.sortDirection |filter:{'title':catalogVm.searchText} |
+     limitTo:4:(catalogVm.currentPage - 1) * 4 track by $index">
+
+        <a href="#/showDetail/{{item.imdbID}}">
+
+            <uib-rating ng-model="item.showflixRating" max="5" read-only="true" on-hover="hoveringOver(value)"
+                        on-leave="overStar = null" titles="['one','two','three']"
+                        aria-labelledby="default-rating"></uib-rating>
+            <img ng-click=catalogVm.setCurrentPage(catalogVm.currentPage) class="img  img-rounded  well well-sm"
+                 uib-popover-template="'/tmpl/showSummary.tmpl.html'" popover-title={{item.title}}
+                 popover-trigger="mouseenter"
+                 popover-animation="true" popover-placement="bottom-right" ng-src="{{item.poster}}">
+        </a>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <form name="addUserForm" ng-submit="userVm.addUser(addUserForm.$valid)" novalidate>
+
+                    <div class="form-group">
+                        <label class="fontMediumWhite" for="firstName">Name</label>
+                        <input type="name" name="firstName" required minlength="5" class="form-control" id="firstName"
+                               placeholder="First Name" ng-model="userVm.newUser.firstName">
+                        <div class="error" ng-messages="addUserForm.firstName.$error" ng-if="addUserForm.firstName.$dirty">
+                            <p ng-message="required">First name is required</p>
+                            <p ng-message="minlength">First name must be 5 char or more.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="fontMediumWhite" for="lastName">Lastname</label>
+                        <input type="name" name="lastName" required class="form-control" id="lastName"
+                               placeholder="Last Name" ng-model="userVm.newUser.lastName">
+                        <div class="error" ng-messages="addUserForm.lastName.$error" ng-if="addUserForm.lastName.$dirty">
+                            <p ng-message="required">Last Name is required</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="fontMediumWhite" for="userName">User Name</label>
+                        <input type="name" name="userName" required minlength= "5" class="form-control" id="userName"
+                               placeholder="User Name" ng-model="userVm.newUser.userName">
+                        <div class="error" ng-messages="addUserForm.userName.$error" ng-if="addUserForm.userName.$dirty">
+                            <p ng-message="required">Last Name is required</p>
+                            <p ng-message="minlength">User Name must be 5 char or more.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="fontMediumWhite" for="email">Email</label>
+                        <input type="email" name="email" required class="form-control" id="email"
+                               placeholder="example@domain.com" ng-model="userVm.newUser.email">
+                        <div class="error" ng-messages="addUserForm.email.$error" ng-if="addUserForm.email.$dirty">
+                            <p ng-message="required">Email is required</p>
+                            <p ng-message="email">Email is invalid</p>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="fontMediumWhite" for="password">Password</label>
+                        <input type="password" name="password" required  minlength="5" class="form-control" id="password"
+                               placeholder="Password" ng-model="userVm.newUser.userPassword">
+                        <div class="error" ng-messages="addUserForm.password.$error" ng-if="addUserForm.password.$dirty">
+                            <p ng-message="required">Password is required</p>
+                            <p ng-message="minlength">Password must be 5 digits.</p>
+                        </div>
+                    </div>
+                    <button   type="submit" class=" btn btn-primary">Submit Details</button>
+                </form>
+            </div>
+            </div>
+        </div>

@@ -1,0 +1,251 @@
+<div class="container">
+
+
+    <form name="addShowform" ng-submit="addShowVm.addShow(addShowform.$valid)" novalidate>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="title">Title</label>
+                    <input type="name" name="title" required class="form-control" id="title"
+                           placeholder="title" ng-model="addShowVm.newShow.title">
+                    <div class="error" ng-messages="addUserForm.title.$error" ng-if="addUserForm.title.$dirty">
+                        <p ng-message="required">title is required</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="rated">Rated</label>
+                    <input type="name" name="rated" required minlength="5" class="form-control" id="rated"
+                           placeholder="R,M" ng-model="addShowVm.newShow.rated">
+                    <div class="error" ng-messages="addUserForm.rated.$error" ng-if="addUserForm.rated.$dirty">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="awards">Awards</label>
+                    <input type="name" name="awards" required minlength="5" class="form-control" id="awards"
+                           placeholder="awards" ng-model="addShowVm.newShow.awards">
+                    <div class="error" ng-messages="addUserForm.awards.$error" ng-if="addUserForm.awards.$dirty">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="genre">Genre</label>
+                    <input type="name" name="genre" required class="form-control" id="genre"
+                           placeholder="genre" ng-model="addShowVm.newShow.genre">
+                    <div class="error" ng-messages="addUserForm.genre.$error" ng-if="addUserForm.genre.$dirty">
+                        <p ng-message="required">genre is required</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="director">Director</label>
+                    <input type="name" name="director" required minlength="5" class="form-control" id="director"
+                           placeholder="director" ng-model="addShowVm.newShow.director">
+                    <div class="error" ng-messages="addUserForm.director.$error" ng-if="addUserForm.director.$dirty">
+                        <p ng-message="required">Director name is required</p>
+                        <p ng-message="minlength">Director name must be 5 characters.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="writer">Writer</label>
+                    <input type="name" name="writer" required minlength="5" class="form-control" id="writer"
+                           placeholder="writer" ng-model="addShowVm.newShow.writer">
+                    <div class="error" ng-messages="addUserForm.writer.$error" ng-if="addUserForm.writer.$dirty">
+                        <p ng-message="required">writer is required</p>
+                        <p ng-message="minlength">writer must be 5 characters.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="actors">Actors</label>
+                    <input type="name" name="actors" required minlength="5" class="form-control" id="actors"
+                           placeholder="actors" ng-model="addShowVm.newShow.actors">
+                    <div class="error" ng-messages="addUserForm.actors.$error" ng-if="addUserForm.actors.$dirty">
+                        <p ng-message="required">actors is required</p>
+                        <p ng-message="minlength">actors must be 5 characters in length.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="language">Language</label>
+                    <input type="name" name="language" required class="form-control" id="language"
+                           placeholder="English , Hindi ...." ng-model="addShowVm.newShow.language">
+                    <div class="error" ng-messages="addUserForm.language.$error" ng-if="addUserForm.language.$dirty">
+                        <p ng-message="required">language is required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="country">Country</label>
+                    <input type="name" name="country" required minlength="5" class="form-control" id="country"
+                           placeholder="USA, India ....." ng-model="addShowVm.newShow.country">
+                    <div class="error" ng-messages="addUserForm.country.$error" ng-if="addUserForm.country.$dirty">
+                        <p ng-message="required">country is required</p>
+                        <p ng-message="minlength">country must be 5 characters in length.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="year">Year</label>
+                    <input type="name" name="year" required minlength="4" maxlength="4" class="form-control" id="year"
+                           placeholder="Example: 2015" ng-model="addShowVm.newShow.year">
+                    <div class="error" ng-messages="addUserForm.year.$error" ng-if="addUserForm.year.$dirty">
+                        <p ng-message="required">year is required</p>
+                        <p ng-message="minlength">year must be 4 digits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="year">Runtime</label>
+                    <input type="name" name="runtime" required minlength="2" maxlength="4" class="form-control" id="runtime"
+                           placeholder="Example: 104" ng-model="addShowVm.newShow.runtime">
+                    <div class="error" ng-messages="addUserForm.runtime.$error" ng-if="addUserForm.runtime.$dirty">
+                        <p ng-message="required">runtime is required</p>
+                        <p ng-message="minlength">runtime must be 2 digits.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-2">
+
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="released">Released</label>
+                    <input type="name" name="released" required class="form-control" id="released"
+                           placeholder="example: Jan 2014" ng-model="addShowVm.newShow.released">
+                    <div class="error" ng-messages="addUserForm.released.$error" ng-if="addUserForm.released.$dirty">
+                        <p ng-message="required">released is required</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="plot">Plot</label>
+                <textarea rows="4" type="name" name="plot" required minlength="5" class="form-control" id="plot"
+                          placeholder="plot" ng-model="addShowVm.newShow.plot"></textarea>
+                    <div class="error" ng-messages="addUserForm.plot.$error" ng-if="addUserForm.plot.$dirty">
+                        <p ng-message="required">plot is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="poster">Poter</label>
+                    <textarea rows="4" type="name" name="poster" required minlength="5" class="form-control" id="poster"
+                              placeholder="url for the poster" ng-model="addShowVm.newShow.poster"></textarea>
+                    <div class="error" ng-messages="addUserForm.poster.$error" ng-if="addUserForm.poster.$dirty">
+                        <p ng-message="required">poster is required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="metascore">Metascore</label>
+                    <input type="name" name="metascore" class="form-control" id="metascore"
+                           placeholder="metascore" ng-model="addShowVm.newShow.metascore">
+                    <div class="error" ng-messages="addUserForm.metascore.$error" ng-if="addUserForm.metascore.$dirty">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="imdbRating">Imdb-Rating</label>
+                    <input type="name" name="imdbRating" required  class="form-control" id="imdbRating"
+                           placeholder="imdbRating" ng-model="addShowVm.newShow.imdbRating">
+                    <div class="error" ng-messages="addUserForm.imdbRating.$error"
+                         ng-if="addUserForm.imdbRating.$dirty">
+                        <p ng-message="required">imdbRating is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="imdbVotes">Imdb-Votes</label>
+                    <input type="name" name="imdbVotes" minlength="1" class="form-control" id="imdbVotes"
+                           placeholder="imdbVotes" ng-model="addShowVm.newShow.imdbVotes">
+                    <div class="error" ng-messages="addUserForm.imdbVotes.$error" ng-if="addUserForm.imdbVotes.$dirty">
+                        <p ng-message="minlength">imdbVotes must be at least 1 digits.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="imdbID">ImdbID</label>
+                    <input type="name" name="imdbID" required class="form-control" id="imdbID"
+                           placeholder="imdbID" ng-model="addShowVm.newShow.imdbID">
+                    <div class="error" ng-messages="addUserForm.imdbID.$error" ng-if="addUserForm.imdbID.$dirty">
+                        <p ng-message="required">imdbID is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="type">Show Type</label>
+                    <input type="name" name="type" required minlength="5" class="form-control" id="type"
+                           placeholder="type" ng-model="addShowVm.newShow.type">
+                    <div class="error" ng-messages="addUserForm.type.$error" ng-if="addUserForm.type.$dirty">
+                        <p ng-message="required">type is required</p>
+                        <p ng-message="minlength">type must be 5 characters in length.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label class="fontMediumWhite" for="showflixRating">Showflix-Rating</label>
+                    <input ng-readonly="true" type="name" name="showflixRating" required class="form-control"
+                           id="showflixRating"
+                           placeholder="showflixRating" ng-model="addShowVm.newShow.showflixRating">
+                    <div class="error" ng-messages="addUserForm.showflixRating.$error"
+                         ng-if="addUserForm.showflixRating.$dirty">
+                        <p ng-message="required">showflixRating is required</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button ng-if="!addShowVm.isLoadTypeEdit()" type="submit" class=" btn btn-primary">Add Details</button>
+        <a href="#/catalog/add" ng-if="addShowVm.isLoadTypeEdit()"  ng-click="addShowVm.editShow()" class=" btn btn-primary">Submit Changes</a>
+    </form>
+</div>
+</div>
