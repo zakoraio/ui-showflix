@@ -31,7 +31,6 @@
                 },
                 data: user
             }
-            console.log(user);
             return $http(req)
                 .then(successFn ,errorFn);
         }
@@ -45,7 +44,6 @@
                 },
                 data: user
             }
-            console.log(user);
             return $http(req)
                 .then(successFn ,errorFn);
         }
@@ -69,7 +67,6 @@
                     'Authentication-Token': 'Bearer '+localStorage.getItem('sessionToken')
                 },
             }
-            console.log(imdbId);
             return $http(req)
                 .then(successFn ,errorFn);
         }
@@ -84,13 +81,11 @@
                 },
                 data : comment
             }
-            console.log(comment);
             return $http(req)
                 .then(successFn ,errorFn);
         }
 
         function setRating(rating){
-            console.log(rating);
             var req = {
                 method: 'POST',
                 url: CONFIG.API_END_POINT+'rating/',
@@ -134,7 +129,6 @@
                 .then(successFn ,errorFn);
         }
         function editShow(showDetails){
-            console.log(showDetails);
             var req = {
                 method: 'PUT',
                 url: CONFIG.API_END_POINT+'shows/'+showDetails.imdbID,
