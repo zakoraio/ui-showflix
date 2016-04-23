@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="showflix">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- bower:css -->
+    <!-- endInject -->
+
+    <!-- Inject:css -->
+    <!-- endInject -->
+
+</head>
+<body background="/img/curtains.jpg">
+<div class="container">
+    <div class="page-header ">
+        <div class="row">
+            <div class="col-sm-10">
+                <a class="showFlixHeader" href="#/catalog"><h1 class="headerFont">
+                    Showflix
+                </h1></a>
+            </div>
+            <div class="col-sm-2">
+                <a href="#/logout" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        <section ng-view></section>
+    </div>
+</div>
+<div>
+    <div class=" row fontSmallWhite container">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4"> &copy;Saurabh Rai</div>
+
+    </div>
+</div>
+<!-- bower:js -->
+<!-- endInject -->
+
+<!-- Inject:js -->
+<!-- endInject -->
+
+
+</body>
+</html>

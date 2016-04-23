@@ -1,0 +1,30 @@
+    <div class="container">
+        <div class="row  ">
+            <div class="col-sm-6">
+                <form   name="loginForm" ng-submit="loginVm.login(loginForm.$valid,'user')" novalidate>
+
+                    <div class="form-group">
+                        <label class="fontMediumWhite" for="userName">User Name</label>
+                        <input type="name" name="userName" required class="form-control" id="userName"
+                               placeholder="User Name" ng-model="loginVm.user.userName">
+                        <div class="error" ng-messages="loginForm.userName.$error" ng-if="loginForm.userName.$dirty">
+                            <p ng-message="required">User Name is required</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="fontMediumWhite" for="password">Password</label>
+                        <input type="password" name="password" required class="form-control" id="password"
+                               placeholder="Password" ng-model="loginVm.user.userPassword">
+                        <div class="error" ng-messages="loginForm.password.$error" ng-if="loginForm.password.$dirty">
+                            <p ng-message="required">Password is required</p>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">User Login</button>
+                    <a href="#/" ng-click=loginVm.login(loginForm.$valid,'admin') class="btn btn-primary">Admin Login</a>
+                    <a href="#/addUser" class="btn btn-primary" role="button">Create User</a>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>

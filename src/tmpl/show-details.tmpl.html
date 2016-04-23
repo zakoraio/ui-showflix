@@ -1,0 +1,105 @@
+<div class="row">
+    <div class="col-sm-3">
+        <img height="300" width="300" class="img-responsive well well-sm " ng-src="{{showDetailsVm.poster}}">
+        <uib-rating ng-model="showDetailsVm.avgRating" max="5"
+                    read-only="true"
+                    on-leave="overStar = null"
+                    aria-labelledby="default-rating"></uib-rating>
+    </div>
+    <div class="col-sm-8 well well-sm">
+        <div class="panel panel-default">
+            <div class="panel-heading fontLarge">Plot</div>
+            <div class="panel-body fontSmall">{{showDetailsVm.plot}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 fontSmallBold">Title</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.title}}</div>
+            <div class="col-sm-2 fontSmallBold">Year</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.year}}</div>
+            <div class="col-sm-2 fontSmallBold">Rated</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.rated}}</div>
+            <div class="col-sm-2 fontSmallBold">Released</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.released}}</div>
+            <div class="col-sm-2 fontSmallBold">Runtime</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.runtime}}</div>
+            <div class="col-sm-2 fontSmallBold">Genre</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.genre}}</div>
+            <div class="col-sm-2 fontSmallBold">Director</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.writer}}</div>
+            <div class="col-sm-2 fontSmallBold">Writer</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.director}}</div>
+            <div class="col-sm-2 fontSmallBold">Actors</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.actors}}</div>
+            <div class="col-sm-2 fontSmallBold">Language</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.language}}</div>
+            <div class="col-sm-2 fontSmallBold">Country</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.country}}</div>
+            <div class="col-sm-2 fontSmallBold">Awards</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.awards}}</div>
+            <div class="col-sm-2 fontSmallBold">Metascore</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.metascore}}</div>
+            <div class="col-sm-2 fontSmallBold">ImdbRating</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.imdbRating}}</div>
+            <div class="col-sm-2 fontSmallBold">ImdbVotes</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.imdbVotes}}</div>
+            <div class="col-sm-2 fontSmallBold">Type</div>
+            <div class="col-sm-10 fontSmall">{{showDetailsVm.type}}</div>
+            <div class="imdbLinkPadding">
+            <div class="col-sm-12 fontSmall"><a href="http://www.imdb.com/title/{{showDetailsVm.imdbID}}/">Visit imdb Page here</a></div>
+            </div>
+
+            <div ng-if="showDetailsVm.isLoginTypeAdmin()" class="col-sm-10 fontSmallBold"></div>
+            <div ng-if="showDetailsVm.isLoginTypeAdmin()"  class="col-sm-2 fontSmallBold">
+                <a ng-click="showDetailsVm.editDetails()" class="btn btn-primary">Edit Details</a></div>
+        </div>
+
+    </div>
+    <div class="row">
+
+
+    </div>
+
+    <div class="row fontSmallWhite">
+        <table class="table ">
+            <tr class="col-lg-12 " ng-repeat="comment in showDetailsVm.comments">
+                <td class="container">
+                    <div>{{comment.comment.userName}}</div>
+                    <div>
+                        <p>{{comment.comment.comment}}</p>
+                    </div>
+                    <div class="footer">
+                        <uib-rating ng-model="comment.rating" max="5"
+                                    read-only="true" aria-labelledby="default-rating"></uib-rating>
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="row fontSmallWhite">
+        <div class="col-sm-4">
+            <div class="container">
+                <div style="max-width:600px">
+                    <textarea name="Comment" required class="form-control" id="Comment"
+                              placeholder="Enter Comment" ng-model="showDetailsVm.userComment"></textarea>
+                </div>
+                <div class="footer">
+                    <uib-rating ng-model="showDetailsVm.userRating" max="5"
+                                read-only="false" on-hover="hoveringOver(value)"
+                                on-leave="overStar = null" titles="['one','two','three']"
+                                aria-labelledby="default-rating"></uib-rating>
+                </div>
+                <div class="addComment">
+                    <a ng-click="showDetailsVm.setRating();showDetailsVm.addComment()" class="btn btn-primary">Add
+                        Comment</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
